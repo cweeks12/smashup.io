@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Smash Up Faction Randomizer</title>
+        <link href="/styles.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Anton|Oxygen" rel="stylesheet">
+    </head>
+    <body>
+
+        <h1 id="title">Smash Up Faction Randomizer</h1>
+
+        <p id="instructions">Select the sets that you own. Enter the number of players and hit 'Go!' below. Have fun!</p>
+        <p id="instructions">If you'd like to learn more about Smash Up, check out the <a href="https://www.alderacsite.com/smash-up-home/">Publisher's Website</a></p>
+        <hr/>
+        <div id="app">
+        <button v-if="loggedIn" v-on:click="doLogout">Logout</button>
+            <div v-if="loggedIn">
+                <div id="playerSection">
+                    <h1 class="topTitles">Players</h1>
+                    <div class="centerPlease">
+                        <input type="text" id="playerCount" v-model="playerTextEntry">
+                    </div>
+                </div>
+                <hr/>
+                <div>
+                    <h1 class="topTitles">Expansions</h1>
+                    <p id="instructions" style="text-align: center">Mark the expansions that you own to get random factions to play with.</p>
+                    <div id="expansionsList">
+                        <div v-for="expansion in expansions">
+                            <button class="availableExpansion" v-on:click="selectExpansion(expansion)">{{expansion.name}}</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!--<div>
+                    <h1 class="topTitles" v-if="factions.length > 0">Factions</h1>
+                    <div id="factionsList">
+                        <div v-for="faction in factions">
+                            <button class="availableFaction" v-on:click="selectFaction(faction.id)">{{faction.faction}}</button>
+                        </div>
+                    </div>
+
+                </div>-->
+                <div id="resultChild">
+                    <div class="centerPlease">
+                        <input type="button" id="randomize" value="Go!" v-on:click="randomizeFactions"/>
+                    </div>
+                    <hr v-if="randomPlayerFactions.length > 0"/>
+                    <h1 v-if="randomPlayerFactions.length > 0">Smashed Up Combinations</h1>
+                    <div class="resultItem" v-for="player in randomPlayerFactions">
+                        {{player.first.name}} {{player.second.name}}
+                    </div>
+                </div>
+
+            </div>
+            <div v-else>
+                <h1 class="topTitles" >Login or Register</h1>
+                <form v-on:submit.prevent="register">
+                    <div class="login">
+                        <div class="loginRow" >
+                            <div class="loginLabel">
+                                Username
+                            </div>
+                            <input type="text" v-model="username"/>
+                        </div>
+                        <div class="loginRow">
+                            <div class="loginLabel">
+                                Email
+                            </div>
+                            <input type="text" v-model="email"/>
+                        </div>
+                        <div class="loginRow">
+                            <div class="loginLabel">
+                                Password
+                            </div>
+                            <input type="password" v-model="password"/>
+                        </div>
+                        <div class="loginRow">
+                            <input type="submit" value="Register"/>
+                        </div>
+                    </div>
+
+                </form>
+
+                <form v-on:submit.prevent="login">
+                    <div class="login">
+                        <div class="loginRow">
+                            <div class="loginLabel">
+                                Email
+                            </div>
+                            <input type="text" v-model="login_email"/>
+                        </div>
+                        <div class="loginRow">
+                            <div class="loginLabel">
+                                Password
+                            </div>
+                            <input type="password" v-model="login_password"/>
+                        </div>
+                        <div class="loginRow">
+                            <input type="submit" value="Login"/>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div id="footer">
+            The code is hosted smashingly on <a href="https://github.com/cweeks12/SmashUpRandomizer">Github</a>. 
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" integrity="sha256-pU9euBaEcVl8Gtg+FRYCtin2vKLN8sx5/4npZDmY2VA=" crossorigin="anonymous"></script>
+        <script text="type/javascript" src="/script.js">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,130 @@
+#footer {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 16pt;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+body {
+    background-color: #f8f8ff;
+}
+
+h {
+    font-family: 'Anton', sans-serif;
+    font-weight: normal;
+}
+
+#title{
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    font-size: 40pt;
+    padding-left: 0px;
+}
+
+#instructions {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 16pt;
+    padding: 30px;
+    padding-top: 0px;
+}
+
+li {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 1em;
+}
+
+#expansionsList, #factionsList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+    font-size: 3em;
+}
+
+
+.faction {
+    font-size: 1em;
+}
+
+.availableExpansion, .availableFaction{
+    width: 200px;
+    height: 200px;
+    margin: 25px;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 16pt;
+}
+
+#playerSection {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+#playerSection h1, #resultChild h1 {
+    text-align: center;
+    padding-left: 0px;
+}
+
+#playerCount{
+    font-size: 16pt;
+    width: 10%;
+}
+
+#randomize {
+    font-size: 16pt;
+}
+
+.topTitles{
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+}
+
+.centerPlease {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.resultItem {
+    text-align: center;
+    display: block;
+    background-color: #CC4;
+    margin: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    height: 100%;
+    padding: 10px;
+    width: 25%;
+}
+
+.login {
+    display:flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.loginRow {
+    margin: auto;
+    width: 50%;
+}
+
+.loginRow input {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-bottom: 40px;
+    font-size: 16pt;
+}
+
+.loginLabel {
+    font-size: 16pt;
+    font-family: 'Oxygen', sans-serif;
+    margin-bottom: 10px;
+}

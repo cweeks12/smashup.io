@@ -29,32 +29,32 @@ let factions = {
     },
     'Awesome Level 9000': {
         factions: [
-        {name:     "Bear_Cavalry"},
+        {name:     "Bear Cavalry"},
         {name: "Ghosts"},
-        {name: "Killer_Plants"},
+        {name: "Killer Plants"},
         {name: "Steampunks"},
         ]
     },
     'The Obligatory Cthulu Set': {
         factions: [
-        {name:     "Elder_Things"},
+        {name:     "Elder Things"},
         {name: "Innsmouth"},
-        {name: "Cthulu_Cultists"},
-        {name: "Miskatonic_University"},
+        {name: "Cthulu Cultists"},
+        {name: "Miskatonic University"},
         ]
     },
     'Science Fiction Double Feature': {
         factions: [
-        {name:     "Cyborg_Apes"},
+        {name:     "Cyborg Apes"},
         {name: "Shapeshifters"},
-        {name: "Super_Spies"},
-        {name: "Time_Travelers"},
+        {name: "Super Spies"},
+        {name: "Time Travelers"},
         ]
     },
     'Monster Smash': {
         factions: [
-        {name:     "Giant_Ants"},
-        {name: "Mad_Scientists"},
+        {name:     "Giant Ants"},
+        {name: "Mad Scientists"},
         {name: "Vampires"},
         {name: "Werewolves"},
         ]
@@ -62,15 +62,15 @@ let factions = {
     'Pretty Pretty Smash Up': {
         factions: [
         {name:     "Fairies"},
-        {name: "Kitty_Cats"},
-        {name: "Mythic_Horses"},
+        {name: "Kitty Cats"},
+        {name: "Mythic Horses"},
         {name: "Princesses"},
         ]
     },
     "It's Your Fault!": {
         factions: [
         {name:     "Dragons"},
-        {name: "Mythic_Greeks"},
+        {name: "Mythic Greeks"},
         {name: "Sharks"},
         {name: "Tornadoes"},
         {name: "Superheroes"},
@@ -78,15 +78,15 @@ let factions = {
     },
     'Cease and Desist': {
         factions: [
-        {name:     "Star_Roamers"},
-        {name: "Astro_Knights"},
+        {name:     "Star Roamers"},
+        {name: "Astro Knights"},
         {name: "Changerbots"},
         {name: "Ignobles"},
         ]
     },
     'What Were We Thinking?': {
         factions: [
-        {name: "Teddy_Bears"},
+        {name: "Teddy Bears"},
         {name: "Grandmas"},
         {name: "Rockstars"},
         {name: "Explorers"},
@@ -95,17 +95,17 @@ let factions = {
     'Big in Japan': {
         factions: [
         {name:     "Kaiju"},
-        {name: "Mystical_Girls"},
-        {name: "Mega_Troopers"},
-        {name: "Itty_Critters"},
+        {name: "Mystical Girls"},
+        {name: "Mega Troopers"},
+        {name: "Itty Critters"},
         ]
     },
     "That '70s Expansion": {
         factions: [
         {name:     "Truckers"},
-        {name: "Disco_Dancers"},
+        {name: "Disco Dancers"},
         {name: "Vigilantes"},
-        {name: "Kung_Fu_Fighters"},
+        {name: "Kung Fu Fighters"},
         ]
     },
     'Big Geeky Box': {
@@ -115,7 +115,7 @@ let factions = {
     },
     'All Star Event Kit': {
         factions: [
-        {name:  "All_Stars"},
+        {name:  "All Stars"},
         ]
     },
     'Sheep Promo': {
@@ -134,7 +134,6 @@ exports.up = function(knex, Promise) {
             factionArray.push({name: faction.name, expansion: key});
         });
     }
-    console.log(factionArray);
 
     return Promise.all(
             expansions.map(expansion => {
